@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carta do Jogo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="envelope-wrapper">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-front">
+          <div class="flap"></div>
+          <div class="front-body"></div>
+        </div>
+
+        <!-- Papel com a pergunta -->
+        <div class="letter" id="letter">
+          <p>Quer assistir o jogo comigo?</p>
+        </div>
+      </div>
+
+      <button id="btnOpen">Abrir carta</button>
+    </div>
+  </div>
+
+  <script>
+    const btnOpen = document.getElementById('btnOpen');
+    const envelope = document.getElementById('envelope');
+
+    btnOpen.addEventListener('click', () => {
+      envelope.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
